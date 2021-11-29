@@ -31,6 +31,7 @@ class MainVm : BaseViewModel() {
                 getListProjec1t()
             }.next{
                 Log.e("requestFow", "==collect=---------------=next==>${this}")
+                Log.i("requestFow", "-----${this}")
                 responseTextFlow.set(data.toString())
             }
 
