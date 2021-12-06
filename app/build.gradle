@@ -58,7 +58,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation project(path: ':lib_base')
     compileOnly "me.ele:lancet-base:1.0.6"
 
