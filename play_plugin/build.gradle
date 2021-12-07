@@ -1,0 +1,33 @@
+plugins {
+    id 'groovy'
+    id 'maven'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //deploy到maven仓库
+            // 调用方式就是 'com.thunder.plugin:timeplugin:1.0-SNAPSHOT'
+            pom.groupId = 'com.qimiaosiwei.android.plugin'
+            pom.version = '1.0-SNAPSHOT'
+            pom.artifactId = 'play-plugin'
+            repository(url: uri('../../repo')) //deploy到本地仓库
+        }
+    }
+}
