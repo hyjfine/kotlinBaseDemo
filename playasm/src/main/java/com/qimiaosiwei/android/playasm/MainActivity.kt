@@ -17,7 +17,12 @@ class MainActivity : AppCompatActivity() {
         val test = TestBytecode()
         findViewById<Button>(R.id.sayBtn).setOnClickListener {
             test.sayST()
+        }
+        findViewById<Button>(R.id.hiBtn).setOnClickListener {
             test.hiST()
+        }
+        findViewById<Button>(R.id.worldBtn).setOnClickListener {
+            test.world()
         }
     }
 

@@ -9,6 +9,7 @@ import android.util.Log;
  */
 public class TestBytecode {
 
+    @StatisticTime
     void sayST() {
         long start = System.currentTimeMillis();
         Log.d("testBytecode", "-----say " + start);
@@ -19,7 +20,12 @@ public class TestBytecode {
         }
     }
 
+    @StatisticTime
     void hiST() {
         Log.d("testBytecode", "-----hi");
+    }
+
+    void world() {
+        Log.d("testBytecode", "-----world");
     }
 }

@@ -23,4 +23,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/hiBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sayBtn" />
+
+    <Button
+        android:id="@+id/worldBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="world"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hiBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
