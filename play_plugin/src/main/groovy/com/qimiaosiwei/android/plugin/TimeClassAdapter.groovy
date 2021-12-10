@@ -10,7 +10,7 @@ class TimeClassAdapter extends AdviceAdapter {
 
     @Override
     protected void onMethodEnter() {
-        System.out.println("start : ")
+        println("start : ")
         visitMethodInsn(INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false)
         visitVarInsn(LSTORE, 0)
         super.onMethodEnter()
@@ -20,7 +20,7 @@ class TimeClassAdapter extends AdviceAdapter {
 
     @Override
     protected void onMethodExit(int opcode) {
-        System.out.println("end : ")
+        println("end : ")
         visitMethodInsn(INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false)
         visitVarInsn(LSTORE, 2)
         visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;")

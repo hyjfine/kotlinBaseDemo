@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * time   : 2021/12/8
  * desc   :
  */
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-@interface StatisticTime {
+public @interface StatisticTime {
 }

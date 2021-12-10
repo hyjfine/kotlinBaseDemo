@@ -11,10 +11,13 @@ class PlayPlugin implements Plugin<Project> {
     void apply(Project project) {
 //        project.task("customPlugin") {
 //            doLast {
-//                println("this is my plugin ~ !")
+                println("this is my plugin ~ !")
 //            }
 //        }
-        def android = project.extensions.findByType(AppExtension)
-        android.registerTransform(new TimeTransform())
+//        def android = project.extensions.findByType(AppExtension)
+//        android.registerTransform(new TimeTransform2())
+
+        def andr = project.extensions.getByName('android')
+        andr.registerTransform(new TimeTransform())
     }
 }

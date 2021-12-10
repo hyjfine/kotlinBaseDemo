@@ -9,7 +9,7 @@ import android.util.Log;
  */
 public class TestBytecode {
 
-    void say() {
+    void sayST() {
         long start = System.currentTimeMillis();
         Log.d("testBytecode", "-----say " + start);
         try {
@@ -19,7 +19,7 @@ public class TestBytecode {
         }
     }
 
-    void hi() {
+    void hiST() {
         Log.d("testBytecode", "-----hi");
     }
 }

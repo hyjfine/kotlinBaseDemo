@@ -1,7 +1,7 @@
+rootProject.name = "kotlinBaseDemo"
 include ':lib'
 include ':app'
-rootProject.name = "kotlinBaseDemo"
-
 include ':lib_base'
 include ':playasm'
 include ':play_plugin'
+include ':WPlugin'
