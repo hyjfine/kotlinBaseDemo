@@ -92,6 +92,8 @@ class TimeTransform extends Transform {
             //列出目录所有文件（包含子文件夹，子文件夹内文件）
             directoryInput.file.eachFileRecurse { File file ->
                 def name = file.name
+                def isDir = file.isDirectory()
+                println("-----handleDirectoryInput $name || $isDir")
                 if (filterClass(name)) {
                     ClassReader classReader = new ClassReader(file.bytes)
                     ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS)

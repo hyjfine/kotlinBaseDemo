@@ -18,6 +18,7 @@ buildscript {
         classpath 'com.bytedance.tools.lancet:lancet-plugin-asm6:1.0.0'
         classpath 'me.ele:lancet-plugin:1.0.6'
         classpath 'com.qimiaosiwei.android.plugin:play-plugin:1.0-SNAPSHOT'
+        classpath 'com.qimiaosiwei.android.plugins:play-plugin-java:1.0-SNAPSHOT'
         classpath 'com.wbh.decoupling.plugin:WPlugin:1.0.0'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -27,6 +28,10 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url uri('../repo')
+        }
+
         google()
         jcenter()
         mavenCentral()

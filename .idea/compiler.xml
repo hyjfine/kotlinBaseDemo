@@ -5,6 +5,7 @@
       <module name="kotlinBaseDemo.app" target="1.8" />
       <module name="kotlinBaseDemo.lib_base" target="1.8" />
       <module name="kotlinBaseDemo.play_plugin" target="1.8" />
+      <module name="kotlinBaseDemo.play_plugin_java" target="1.8" />
       <module name="kotlinBaseDemo.playasm" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -25,6 +25,7 @@ public class TestBytecode {
         Log.d("testBytecode", "-----hi");
     }
 
+//    @StatisticTC
     void world() {
         Log.d("testBytecode", "-----world");
     }

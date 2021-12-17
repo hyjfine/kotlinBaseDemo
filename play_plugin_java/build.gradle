@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'kotlin'
+    id 'kotlin-kapt'
+    id 'maven'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+//    implementation 'com.android.tools.build:gradle:4.2.2', {
+//        exclude group:'org.ow2.asm'
+//    }
+    implementation'com.android.tools.build:gradle:4.1.3'
+    implementation'com.android.tools.build:gradle-api:4.1.3'
+    implementation 'org.ow2.asm:asm:6.0'
+    implementation 'org.ow2.asm:asm-commons:6.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //deploy到maven仓库
+            // 调用方式就是 'com.thunder.plugin:timeplugin:1.0-SNAPSHOT'
+            pom.groupId = 'com.qimiaosiwei.android.plugins'
+            pom.version = '1.0-SNAPSHOT'
+            pom.artifactId = 'play-plugin-java'
+            repository(url: uri('../../repo')) //deploy到本地仓库
+        }
+    }
+}
